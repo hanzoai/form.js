@@ -62,11 +62,11 @@ task 'test-ci', 'Run tests on CI server', ->
   tests = for {browserName, platform, version, deviceName, deviceOrientation} in browsers
     console.log("Attempting With", browserName, platform, version, deviceName, deviceOrientation)
     "NODE_ENV=test
-     BROWSER=\"#{browserName}\"
-     PLATFORM=\"#{platform}\"
-     VERSION=\"#{version}\"
-     DEVICE_NAME=\"#{deviceName ? ''}\"
-     DEVICE_ORIENTATION=\"#{deviceOrientation ? ''}\"
+     BROWSER=#{browserName}
+     PLATFORM=#{platform}
+     VERSION=#{version}
+     DEVICE_NAME=#{deviceName ? ''}
+     DEVICE_ORIENTATION=#{deviceOrientation ? ''}
      node_modules/.bin/mocha
      --compilers coffee:coffee-script/register
      --reporter spec
