@@ -59,22 +59,28 @@ do ->
     emitter.emit events.InitSubmits, submits
 
     # Called on successful submit
-    ondone = ()->
-      emitter.emit events.OnDone
+    ondone = (event)->
+      emitter.emit events.OnDone, event
 
     # Called when trying to submit
     onsubmit = (event)->
-      done = ()->
-        form.removeEventListener 'submit', onsubmit
-        form.addEventListener 'submit', ondone
+      if event.defaultPrevented
+        return
+      else
+        event.preventDefault()
 
-        form.dispatchEvent new Event 'submit',
-          bubbles:    false
-          cancelable: true
+      done = ()->
+        form.addEventListener 'submit', ondone
+        form.removeEventListener 'submit', onsubmit
+
+        setTimeout ()->
+          form.dispatchEvent new Event 'submit',
+            bubbles:    false
+            cancelable: true
+        , 500
 
       # Call done to manually fire
       emitter.emit events.OnSubmit, done, event
-      event.preventDefault()
 
     form.addEventListener 'submit', onsubmit
 
