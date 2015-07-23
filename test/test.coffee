@@ -28,7 +28,7 @@ describe "Inform (#{process.env.BROWSER})", ->
         .url testPage
         .waitForExist "#lastthing"
         .click '#s'
-        .waitForExist "#goahead"
+        .waitForExist "#goahead", 2000
         .getText '#submited', (err, res) ->
           res.should.equal 'true'
         .getText '#doned', (err, res) ->
@@ -40,7 +40,7 @@ describe "Inform (#{process.env.BROWSER})", ->
         .url testPage
         .waitForExist "#lastthing"
         .click '#as'
-        .waitForExist "#goahead"
+        .waitForExist "#goahead", 2000
         .getText '#submited', (err, res) ->
           res.should.equal 'true'
         .getText '#doned', (err, res) ->
@@ -52,7 +52,7 @@ describe "Inform (#{process.env.BROWSER})", ->
         .url testPage
         .waitForExist "#lastthing"
         .click '#aas'
-        .waitForExist "#goahead"
+        .waitForExist "#goahead", 2000
         .getText '#submited', (err, res) ->
           res.should.equal 'true'
         .getText '#doned', (err, res) ->
@@ -64,7 +64,7 @@ describe "Inform (#{process.env.BROWSER})", ->
         .url testPage
         .waitForExist "#lastthing"
         .click '#r'
-        .waitForExist "#goahead"
+        .waitForExist "#goahead", 2000
         .getText '#submited', (err, res) ->
           res.should.equal 'false'
         .getText '#doned', (err, res) ->
