@@ -40,9 +40,8 @@ module.exports = [
   # version: '8.0'
 # ,
   browserName: 'internet explorer'
-  platform: 'Windows 8.1'
+  platform: 'Windows 7'
   version: '11.0'
-  deviceName: 'PC'
 ,
   # browserName: 'internet explorer'
   # platform: 'Windows 8'
