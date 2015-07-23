@@ -3,7 +3,7 @@ webdriver = require 'webdriverio'
 exports.getBrowser = ->
   console.log("GetBrowser", process.env.BROWSER, process.env.PLATFORM, process.env.VERSION)
   caps =
-    browserName:       process.env.BROWSER.replace(/_/g,' ') ? 'phantomjs'
+    browserName:        process.env.BROWSER.replace(/_/g,' ') ? 'phantomjs'
     # deviceName:        process.env.DEVICE_NAME
     # deviceOrientation: process.env.DEVICE_ORIENTATION
     'phantomjs.binary.path': './node_modules/phantomjs/bin/phantomjs'
@@ -33,6 +33,8 @@ exports.getBrowser = ->
       process.env.TRAVIS_BUILD_NUMBER
     ]
     caps['tunnel-identifier'] = process.env.TRAVIS_JOB_NUMBER
+  else
+    caps.browserName = 'chrome'
 
   webdriver.remote(opts).init()
 
