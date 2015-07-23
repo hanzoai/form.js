@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <script src="jquery-1.11.3.min.js"></script>
+  </head>
+  <body>
+    <form id="wrongform">
+    </form>
+    <form id="test">
+      <script id="inform" src="inform.js"></script>
+      <input id="email" value="testuser@email.com"></input>
+      <input id="name" value="Test User"></input>
+      <input id="misc" value="Something"></input>
+      <input id = "s" type="submit"></input>
+      <button id="as">Also Submit</button>
+      <button id="aas" type="submit">Also Also Submit</button>
+      <button id="r" type="reset">Reset</button>
+    </form>
+    <form id="alsowrongform">
+    </form>
+    <div id="script">
+    </div>
+    <div id="form">
+    </div>
+    <div id="inputs">
+    </div>
+    <div id="submits">
+    </div>
+    <div id="submited">false</div>
+    <div id="doned">false</div>
+
+    <script id="lastthing">
+      var Inform = window.Inform
+
+      Inform.once(Inform.Events.InitScript, function(el){
+        $('#script').html(el.id)
+      })
+
+      Inform.once(Inform.Events.InitForm, function(el){
+        $('#form').html(el.id)
+      })
+
+      Inform.once(Inform.Events.InitInputs, function(els){
+        $('#inputs').html(els.map(function(el){
+          $el = $(el)
+          return $el.attr('id') + ': ' + $el.val()
+        }).join(', '))
+      })
+
+      Inform.once(Inform.Events.InitSubmits, function(els){
+        $('#submits').html(els.map(function(el){
+          return el.id
+        }).join(', '))
+      })
+
+      Inform.once(Inform.Events.OnSubmit, function(done){
+        $('#submited').html('true')
+        done()
+      })
+
+      Inform.once(Inform.Events.OnDone, function(){
+        $('#doned').html('true')
+      })
+    </script>
+  </body>
+</html>
