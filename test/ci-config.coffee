@@ -17,12 +17,12 @@ module.exports = [
   # # deviceName: 'iPhone Simulator'
   # deviceOrientation: 'portrait'
 # ,
-  # browserName: 'android'
-  # platform: 'Linux'
-  # version: '5.1'
-  # # deviceName: 'Android Emulator'
-  # deviceOrientation: 'portrait'
-# ,
+  browserName: 'android'
+  platform: 'ANDROID'
+  version: '5.1'
+  # deviceName: 'Android Emulator'
+  deviceOrientation: 'portrait'
+,
   # browserName: 'android'
   # platform: 'Linux'
   # version: '4.4'
@@ -40,26 +40,26 @@ module.exports = [
   # version: '8.0'
 # ,
   browserName: 'internet explorer'
-  platform: 'Windows 8.1'
+  platform: 'WINDOWS'
   version: '11.0'
 ,
   browserName: 'internet explorer'
-  platform: 'Windows 8'
+  platform: 'WINDOWS'
   version: '10.0'
 ,
   browserName: 'internet explorer'
-  platform: 'Windows 7'
+  platform: 'VISTA'
   version: '9.0'
 ,
   browserName: 'internet explorer'
-  platform: 'Windows XP'
+  platform: 'XP'
   version: '8.0'
 ,
   browserName: 'chrome'
-  platform: 'Linux'
+  platform: 'ANY'
   version: '43.0'
 ,
   browserName: 'firefox'
-  platform: 'Linux'
+  platform: 'ANY'
   version: '38.0'
 ]
