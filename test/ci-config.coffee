@@ -39,9 +39,9 @@ module.exports = [
   # platform: 'OS X 10.10'
   # version: '8.0'
 # ,
-  browserName: 'internet explorer'
-  # platform: 'Windows 8.1'
-  # version: '11'
+  browserName: 'internet_explorer'
+  platform: 'Windows_8'
+  version: '10'
 ,
   # browserName: 'internet explorer'
   # platform: 'Windows 8'
