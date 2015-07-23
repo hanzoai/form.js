@@ -55,11 +55,11 @@ module.exports = [
   # platform: 'WINDOWS'
   # version: '8.0'
 # ,
-  browserName: 'chrome'
-  platform: 'ANY'
-  version: '43.0'
-,
   browserName: 'firefox'
-  platform: 'ANY'
+  platform: 'LINUX'
   version: '38.0'
+,
+  browserName: 'chrome'
+  platform: 'LINUX'
+  version: '43.0'
 ]
