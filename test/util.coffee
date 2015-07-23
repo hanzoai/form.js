@@ -11,6 +11,8 @@ exports.getBrowser = ->
     'phantomjs.binary.path': './node_modules/phantomjs/bin/phantomjs'
     logLevel: 'verbose'
 
+  caps.deviceName = process.env.DEVICE_NAME if process.env.DEVICE_NAME != ''
+
   opts =
     desiredCapabilities: caps
 
