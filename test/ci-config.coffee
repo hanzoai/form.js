@@ -18,7 +18,7 @@ module.exports = [
   # deviceOrientation: 'portrait'
 # ,
   browserName: 'android'
-  platform: 'Linux'
+  # platform: 'Linux'
   version: '5.1'
   # deviceName: 'Android Emulator'
   deviceOrientation: 'portrait'
