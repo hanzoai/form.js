@@ -18,9 +18,9 @@ module.exports = [
   # deviceOrientation: 'portrait'
 # ,
   # browserName: 'android'
-  # platform: 'ANDROID'
+  # platform: 'Linux'
   # version: '5.1'
-  # # deviceName: 'Android Emulator'
+   # deviceName: 'Android Emulator'
   # deviceOrientation: 'portrait'
 # ,
   # browserName: 'android'
@@ -40,26 +40,26 @@ module.exports = [
   # version: '8.0'
 # ,
   # browserName: 'internet explorer'
-  # platform: 'WIN8'
+  # platform: 'Windows 8.1'
   # version: '11.0'
 # ,
   # browserName: 'internet explorer'
-  # platform: 'WIN8'
+  # platform: 'Windows 8'
   # version: '10.0'
 # ,
   # browserName: 'internet explorer'
-  # platform: 'WINDOWS'
+  # platform: 'Windows 7'
   # version: '9.0'
 # ,
   # browserName: 'internet explorer'
-  # platform: 'WINDOWS'
+  # platform: 'Windows XP'
   # version: '8.0'
 # ,
-  browserName: 'firefox'
-  platform: 'LINUX'
-  version: '38.0'
-,
   browserName: 'chrome'
-  platform: 'LINUX'
+  platform: 'Linux'
   version: '43.0'
+,
+  browserName: 'firefox'
+  platform: 'Linux'
+  version: '38.0'
 ]
