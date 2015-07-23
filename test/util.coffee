@@ -4,14 +4,14 @@ exports.getBrowser = ->
   console.log("GetBrowser", process.env.BROWSER, process.env.PLATFORM, process.env.VERSION)
   caps =
     browserName:       process.env.BROWSER ? 'phantomjs'
-    platform:          process.env.PLATFORM
-    version:           process.env.VERSION
     # deviceName:        process.env.DEVICE_NAME
     # deviceOrientation: process.env.DEVICE_ORIENTATION
     'phantomjs.binary.path': './node_modules/phantomjs/bin/phantomjs'
     logLevel: 'verbose'
 
-  caps.deviceName = process.env.DEVICE_NAME if process.env.DEVICE_NAME != ''
+  caps.deviceName = process.env.DEVICE_NAME if process.env.DEVICE_NAME
+  caps.platform =   process.env.PLATFORM if process.env.PLATFORM
+  caps.version =    process.env.VERSION if process.env.VERSION
 
   opts =
     desiredCapabilities: caps
