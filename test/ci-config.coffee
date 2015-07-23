@@ -20,19 +20,19 @@ module.exports = [
   browserName: 'android'
   platform: 'Linux'
   version: '5.1'
-  deviceName: 'Android Emulator'
+  # deviceName: 'Android Emulator'
   deviceOrientation: 'portrait'
 ,
   browserName: 'android'
   platform: 'Linux'
   version: '4.4'
-  deviceName: 'Android Emulator'
+  # deviceName: 'Android Emulator'
   deviceOrientation: 'portrait'
 ,
   browserName: 'android'
   platform: 'Linux'
   version: '4.3'
-  deviceName: 'Android Emulator'
+  # deviceName: 'Android Emulator'
   deviceOrientation: 'portrait'
 ,
   browserName: 'safari'
