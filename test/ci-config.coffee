@@ -39,22 +39,22 @@ module.exports = [
   # platform: 'OS X 10.10'
   # version: '8.0'
 # ,
-  browserName: 'internet explorer'
-  platform: 'WINDOWS'
-  version: '11.0'
-,
-  browserName: 'internet explorer'
-  platform: 'WINDOWS'
-  version: '10.0'
-,
-  browserName: 'internet explorer'
-  platform: 'VISTA'
-  version: '9.0'
-,
-  browserName: 'internet explorer'
-  platform: 'XP'
-  version: '8.0'
-,
+  # browserName: 'internet explorer'
+  # platform: 'WIN8'
+  # version: '11.0'
+# ,
+  # browserName: 'internet explorer'
+  # platform: 'WIN8'
+  # version: '10.0'
+# ,
+  # browserName: 'internet explorer'
+  # platform: 'WINDOWS'
+  # version: '9.0'
+# ,
+  # browserName: 'internet explorer'
+  # platform: 'WINDOWS'
+  # version: '8.0'
+# ,
   browserName: 'chrome'
   platform: 'ANY'
   version: '43.0'
