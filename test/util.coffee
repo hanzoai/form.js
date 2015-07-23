@@ -34,7 +34,7 @@ exports.getBrowser = ->
 
   webdriver.remote(opts).init()
 
-  webdriver = require 'webdriverio'
+# webdriver = require 'webdriverio'
 
 # exports.getBrowser = ->
 #   browserName = process.env.BROWSER
