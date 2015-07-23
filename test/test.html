@@ -62,6 +62,9 @@
 
       Inform.once(Inform.Events.OnSubmit, function(done){
         $('#submited').html('true')
+        setTimeout(function (){
+          $('body').append($('<div id="goahead"></div>'))
+        }, 1000)
         done()
       })
 
