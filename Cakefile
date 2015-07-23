@@ -13,8 +13,7 @@ task 'build', 'build project', (options) ->
   exec 'node_modules/.bin/coffee -bcm -o .test/ test/'
 
 task 'watch', 'watch for changes and recompile project', ->
-  exec 'node_modules/.bin/coffee -bcmw -o lib/ src/'
-  exec 'node_modules/.bin/coffee -bcmw -o .test test/'
+  exec 'node_modules/.bin/bebop'
 
 task 'publish', 'publish project', (options) ->
   newVersion = options.version ? 'patch'
