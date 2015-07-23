@@ -56,6 +56,10 @@ module.exports = [
   # version: '8.0'
 # ,
   browserName: 'chrome'
+  platform: 'Linux'
+  version: '43.0'
 ,
   browserName: 'firefox'
+  platform: 'Linux'
+  version: '38.0'
 ]
