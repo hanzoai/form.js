@@ -3,15 +3,15 @@ webdriver = require 'webdriverio'
 exports.getBrowser = ->
   console.log("GetBrowser", process.env.BROWSER, process.env.PLATFORM, process.env.VERSION)
   caps =
-    browserName:       process.env.BROWSER.replace('_',' ') ? 'phantomjs'
+    browserName:       process.env.BROWSER.replace(/_/g,' ') ? 'phantomjs'
     # deviceName:        process.env.DEVICE_NAME
     # deviceOrientation: process.env.DEVICE_ORIENTATION
     'phantomjs.binary.path': './node_modules/phantomjs/bin/phantomjs'
     logLevel: 'verbose'
 
-  caps.deviceName = process.env.DEVICE_NAME.replace('_',' ') if process.env.DEVICE_NAME
-  caps.platform =   process.env.PLATFORM.replace('_',' ') if process.env.PLATFORM
-  caps.version =    process.env.VERSION.replace('_',' ') if process.env.VERSION
+  caps.deviceName = process.env.DEVICE_NAME.replace(/_/g,' ') if process.env.DEVICE_NAME
+  caps.platform =   process.env.PLATFORM.replace(/_/g,' ') if process.env.PLATFORM
+  caps.version =    process.env.VERSION.replace(/_/g,' ') if process.env.VERSION
 
   opts =
     desiredCapabilities: caps
