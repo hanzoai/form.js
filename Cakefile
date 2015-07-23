@@ -65,8 +65,8 @@ task 'test-ci', 'Run tests on CI server', ->
      BROWSER=\"#{browserName.replace(' ', '_')}\"
      PLATFORM=\"#{platform.replace(' ', '_')}\"
      VERSION=\"#{version.replace(' ', '_')}\"
-     DEVICE_NAME=\"#{deviceName.replace(' ', '_') ? ''}\"
-     DEVICE_ORIENTATION=\"#{deviceOrientation.replace(' ', '_') ? ''}\"
+     DEVICE_NAME=\"#{if deviceName then deviceName.replace(' ', '_') else ''}\"
+     DEVICE_ORIENTATION=\"#{if deviceName then deviceOrientation.replace(' ', '_') else ''}\"
      node_modules/.bin/mocha
      --compilers coffee:coffee-script/register
      --reporter spec
