@@ -1,7 +1,7 @@
 webdriver = require 'webdriverio'
 
 exports.getBrowser = ->
-  console.log("2", process.env.BROWSER, process.env.PLATFORM, process.env.VERSION)
+  console.log("GetBrowser", process.env.BROWSER, process.env.PLATFORM, process.env.VERSION)
   caps =
     browserName:       process.env.BROWSER ? 'phantomjs'
     platform:          process.env.PLATFORM
@@ -34,7 +34,7 @@ exports.getBrowser = ->
 
   webdriver.remote(opts).init()
 
-# webdriver = require 'webdriverio'
+ # webdriver = require 'webdriverio'
 
 # exports.getBrowser = ->
 #   browserName = process.env.BROWSER
