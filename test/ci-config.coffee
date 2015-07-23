@@ -17,12 +17,12 @@ module.exports = [
   # # deviceName: 'iPhone Simulator'
   # deviceOrientation: 'portrait'
 # ,
-  browserName: 'android'
-  platform: 'ANDROID'
-  version: '5.1'
-  # deviceName: 'Android Emulator'
-  deviceOrientation: 'portrait'
-,
+  # browserName: 'android'
+  # platform: 'ANDROID'
+  # version: '5.1'
+  # # deviceName: 'Android Emulator'
+  # deviceOrientation: 'portrait'
+# ,
   # browserName: 'android'
   # platform: 'Linux'
   # version: '4.4'
