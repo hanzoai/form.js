@@ -2,8 +2,7 @@ webdriver = require 'webdriverio'
 
 exports.getBrowser = ->
   caps =
-    #dispatch event no worky in phantomjs
-    browserName:       'chrome'
+    browserName:       process.env.BROWSER ? 'phantomjs'
     platform:          process.env.PLATFORM
     version:           process.env.VERSION
     deviceName:        process.env.DEVICE_NAME

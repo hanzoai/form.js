@@ -22,7 +22,7 @@ describe "Inform (#{process.env.BROWSER})", ->
       .call done
 
   #dispatchEvent doesn't seem to work
-  if process.env.BROWSER != 'phantomjs'
+  if process.env.BROWSER != 'phantomjs' || true
     it 'should submit and done for submit input', (done)->
       browser
         .url testPage
