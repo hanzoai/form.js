@@ -60,6 +60,7 @@ task 'test-ci', 'Run tests on CI server', ->
   browsers = require './test/ci-config'
 
   tests = for {browserName, platform, version, deviceName, deviceOrientation} in browsers
+    console.log("1", browserName, platform, version, deviceName, deviceOrientation)
     "NODE_ENV=test
      BROWSER=\"#{browserName}\"
      PLATFORM=\"#{platform}\"
