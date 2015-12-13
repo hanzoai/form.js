@@ -1,4 +1,4 @@
-require 'shortcak'
+require 'shortcake'
 
 require 'cake-version'
 require 'cake-publish'
