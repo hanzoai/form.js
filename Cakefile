@@ -1,4 +1,7 @@
-exec = require('shortcake').exec
+require 'shortcak'
+
+require 'cake-version'
+require 'cake-publish'
 
 option '-b', '--browser [browserName]', 'browser to test with'
 option '-g', '--grep [filter]', 'test filter'
