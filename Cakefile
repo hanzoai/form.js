@@ -1,7 +1,7 @@
 require 'shortcake'
 
-require 'cake-version'
-require 'cake-publish'
+use 'cake-version'
+use 'cake-publish'
 
 option '-b', '--browser [browserName]', 'browser to test with'
 option '-g', '--grep [filter]', 'test filter'
