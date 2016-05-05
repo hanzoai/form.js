@@ -25,7 +25,8 @@ do ->
   form    = getLastTag 'form'
 
   first = true
-  init = ()->
+
+  init = ->
     if first
       first = false
     else
@@ -36,8 +37,9 @@ do ->
     emitter.emit events.InitForm, form
 
     submits = []
-    inputs = []
-    ins = form.getElementsByTagName 'input'
+    inputs  = []
+    ins     = form.getElementsByTagName 'input'
+
     for input in ins
       if input.getAttribute('type') != 'submit'
         inputs.push input
