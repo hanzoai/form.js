@@ -9,12 +9,14 @@ compile = ->
     'node_modules/.bin/coffee -bcm -o lib/ src/'
     'node_modules/.bin/requisite src/index.coffee -m -o inform.min.js'
   ]
-  exec '''
+  exec.interactive '''
     node_modules/.bin/requisite src/index.coffee -o inform.js
     cp inform.js test/inform.js
     '''
 
 module.exports =
+  compile: compile
+
   port: 4242
 
   cwd: process.cwd()
