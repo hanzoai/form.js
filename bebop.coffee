@@ -1,13 +1,18 @@
 fs   = require 'fs'
 path = require 'path'
-exec = require('executive').interactive
+exec = require 'executive'
 
 requisite = 'node_modules/.bin/requisite -g'
 
 compile = ->
-  exec 'node_modules/.bin/coffee -bcm -o lib/ src/'
-  exec 'node_modules/.bin/requisite src/index.coffee -o inform.js'
-  exec 'node_modules/.bin/requisite src/index.coffee -m -o inform.min.js'
+  exec.parallel [
+    'node_modules/.bin/coffee -bcm -o lib/ src/'
+    'node_modules/.bin/requisite src/index.coffee -m -o inform.min.js'
+  ]
+  exec '''
+    node_modules/.bin/requisite src/index.coffee -o inform.js
+    cp inform.js test/inform.js
+    '''
 
 module.exports =
   port: 4242

@@ -14,6 +14,7 @@ task 'clean', 'clean project', (options) ->
 task 'build', 'build project', (options) ->
   exec 'node_modules/.bin/coffee -bcm -o lib/ src/'
   exec 'node_modules/.bin/coffee -bcm -o .test/ test/'
+  exec 'node_modules/.bin/bebop -c'
 
 task 'watch', 'watch for changes and recompile project', ->
   exec 'node_modules/.bin/bebop'
