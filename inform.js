@@ -49,8 +49,8 @@
   require.define = function (file, fn) {
     require.modules[file] = fn
   };
-  // source: node_modules/little-emitter/emitter.js
-  require.define('little-emitter/emitter', function (module, exports, __dirname, __filename, process) {
+  // source: node_modules\little-emitter\emitter.js
+  require.define('./node_modules\\little-emitter\\emitter', function (module, exports, __dirname, __filename, process) {
     /*!
  * little-emitter - A tiny event emitter for node and browser.
  * https://github.com/Alex1990/little-emitter
@@ -167,10 +167,10 @@
       }
     })
   });
-  // source: src/index.coffee
+  // source: src\index.coffee
   require.define('./index', function (module, exports, __dirname, __filename, process) {
     var Emitter, events;
-    Emitter = require('little-emitter/emitter');
+    Emitter = require('./node_modules\\little-emitter\\emitter');
     events = {
       InitScript: 'init-inform-script',
       InitForm: 'init-inform-form',
