@@ -5,29 +5,14 @@ use 'cake-publish'
 
 option '-b', '--browser [browserName]', 'browser to test with'
 option '-g', '--grep [filter]', 'test filter'
-option '-v', '--version [<newversion> | major | minor | patch | build]', 'new version'
 
 task 'clean', 'clean project', (options) ->
   exec 'rm -rf lib'
   exec 'rm -rf .test'
 
 task 'build', 'build project', (options) ->
-  exec 'node_modules/.bin/coffee -bcm -o lib/ src/'
-  exec 'node_modules/.bin/coffee -bcm -o .test/ test/'
-  bebop = require './bebop'
-  bebop.compile()
-
-task 'watch', 'watch for changes and recompile project', ->
-  exec 'node_modules/.bin/bebop'
-
-task 'publish', 'publish project', (options) ->
-  newVersion = options.version ? 'patch'
-
-  exec """
-  git push
-  npm version #{newVersion}
-  npm publish
-  """.split '\n'
+  bundle.write
+    entry: 'src/index.coffee'
 
 task 'static-server', 'Run static server for tests', ->
   connect = require 'connect'
