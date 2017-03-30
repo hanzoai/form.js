@@ -1,9 +1,9 @@
 require 'shortcake'
 
-use 'cake-version'
 use 'cake-bundle'
 use 'cake-outdated'
 use 'cake-publish'
+use 'cake-version'
 
 option '-b', '--browser [browserName]', 'browser to test with'
 option '-g', '--grep [filter]', 'test filter'
