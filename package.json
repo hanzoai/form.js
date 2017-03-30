@@ -49,6 +49,7 @@
     "webdriverio": "^4.6.2"
   },
   "scripts": {
+    "prepublishOnly": "cake build",
     "test": "cake test"
   }
 }
