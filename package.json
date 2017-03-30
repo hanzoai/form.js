@@ -1,6 +1,6 @@
 {
   "name": "form.js",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Automagic form validation and submission library.",
   "main": "lib/form.cjs.js",
   "module": "lib/form.es.js",
