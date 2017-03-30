@@ -1,4 +1,4 @@
-Emitter = require 'little-emitter'
+import Emitter from 'little-emitter'
 
 events =
   InitScript:   'init-inform-script'
