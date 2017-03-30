@@ -12,7 +12,7 @@
 [npm-img]:        https://img.shields.io/npm/v/form.js.svg
 [npm-url]:        https://www.npmjs.com/package/form.js
 [gitter-img]:     https://badges.gitter.im/join-chat.svg
-[gitter-url]:     https://gitter.im/hanzo-io/hi
+[gitter-url]:     https://gitter.im/hanzo-io/chat
 
 <!-- not used -->
 [downloads-img]:     https://img.shields.io/npm/dm/form.js.svg
