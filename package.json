@@ -34,19 +34,19 @@
   "devDependencies": {
     "cake-bundle": "^0.2.16",
     "cake-outdated": "^0.1.16",
-    "cake-publish": "0.1.1",
-    "cake-version": "0.1.3",
+    "cake-publish": "0.1.10",
+    "cake-version": "0.1.11",
     "chai": "^3.1.0",
     "coffee-script": "^1.9.3",
     "connect": "^3.4.0",
-    "mocha": "^2.2.5",
-    "phantomjs": "^1.9.17",
+    "mocha": "^3.2.0",
+    "phantomjs": "^2.1.7",
     "requisite": "^1.9.16",
-    "selenium-standalone": "^4.5.3",
+    "selenium-standalone": "^6.1.0",
     "serve-static": "^1.10.0",
-    "shortcake": "1.1.18",
+    "shortcake": "1.2.5",
     "uglify-js": "^2.4.23",
-    "webdriverio": "^2.4.5"
+    "webdriverio": "^4.6.2"
   },
   "scripts": {
     "test": "cake test"
