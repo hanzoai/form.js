@@ -25,21 +25,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/crowdstart/inform.git"
+    "url": "git+https://github.com/hanzo-io/form.js.git"
   },
   "keywords": [
     "form",
     "contact",
     "email",
     "signup",
-    "crowdstart"
+    "hanzo"
   ],
-  "author": "\"author\": \"Zach Kelling <zk@crowdstart.com> (http://zeekay.io)",
+  "author": "Hanzo, Inc <hi@hanzo.io>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/crowdstart/inform/issues"
+    "url": "https://github.com/hanzo-io/form.js/issues"
   },
-  "homepage": "https://github.com/crowdstart/inform#readme",
+  "homepage": "https://github.com/hanzo-io/form.js#readme",
   "dependencies": {
     "little-emitter": "^0.1.3"
   }
