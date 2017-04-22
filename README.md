@@ -1,4 +1,4 @@
-# form.js
+# Form.js
 
 [![npm][npm-img]][npm-url]
 [![build][build-img]][build-url]
