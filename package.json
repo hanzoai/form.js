@@ -23,7 +23,7 @@
     "hanzo"
   ],
   "author": "Hanzo, Inc <hi@hanzo.io>",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/hanzo-io/form.js/issues"
   },
