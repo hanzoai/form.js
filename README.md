@@ -9,6 +9,57 @@
 
 > Automagic form validation and submission.
 
+## Install
+
+    npm install form.js
+
+Or drop it inside a `<form>` and let it wire itself to the surrounding fields:
+
+    <form>
+      <script src="https://unpkg.com/form.js" data-key="pk_live_…"></script>
+      <input name="email">
+      <button type="submit">Sign up</button>
+    </form>
+
+## Submission
+
+Without a key, form.js is a thin controller around the surrounding form: it
+emits lifecycle events and hands control back to your page. Set a Hanzo
+publishable key on the script tag and it POSTs the serialized form to the Hanzo
+forms ingest instead:
+
+    POST https://api.hanzo.ai/v1/forms
+    Authorization: Bearer pk_live_…
+    Content-Type: application/json
+
+    { "email": "ada@example.com", "metadata": { "name": "Ada" } }
+
+Script-tag options (all `data-*`):
+
+| attribute       | purpose                                                |
+| --------------- | ------------------------------------------------------ |
+| `data-key`      | publishable key (`pk_live_…` / `pk_test_…`)            |
+| `data-token`    | `@hanzo/iam` access token (takes precedence over key)  |
+| `data-endpoint` | override the full submission URL                       |
+| `data-host`     | override the API host (default `https://api.hanzo.ai`) |
+
+## Events
+
+`window.Inform` is an event emitter — listen with `Inform.on` / `Inform.once`:
+
+| event                 | `Inform.Events` | arguments                                               |
+| --------------------- | --------------- | ------------------------------------------------------- |
+| `init-inform-script`  | `InitScript`    | the `<script>` element                                  |
+| `init-inform-form`    | `InitForm`      | the `<form>` element                                    |
+| `init-inform-inputs`  | `InitInputs`    | array of input/select nodes                             |
+| `init-inform-submits` | `InitSubmits`   | array of submit buttons                                 |
+| `inform-submit`       | `OnSubmit`      | unmanaged: `(done, event)`; managed: `(payload, event)` |
+| `inform-done`         | `OnDone`        | the submit event, or the API response (managed)         |
+| `inform-error`        | `OnError`       | submission error (managed)                              |
+
+In unmanaged mode, call `done()` from your `OnSubmit` listener to let the native
+form submit proceed.
+
 ## License
 [BSD][license-url]
 
