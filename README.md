@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/hero.svg" alt="form.js" width="880"></p>
+
 # Form.js
 
 [![npm][npm-img]][npm-url]
