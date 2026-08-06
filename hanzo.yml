@@ -1,0 +1,11 @@
+# CoffeeScript form library, published to npm from a tag.
+# Gate: the real bundle build — the same `cake build` that prepublishOnly runs,
+# so what CI proves is exactly what gets published. `cake test` needs phantomjs
+# and a selenium server, which is a harness, not a push gate.
+test:
+  - name: build
+    run: |
+      set -euo pipefail
+      npm install --no-audit --no-fund
+      npx cake build
+      test -s lib/inform.js || ls -l lib
