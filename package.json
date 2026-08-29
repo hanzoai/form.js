@@ -36,17 +36,17 @@
     "cake-outdated": "^0.1.18",
     "cake-publish": "^0.1.10",
     "cake-version": "^0.1.15",
-    "chai": "^4.5.0",
+    "chai": "^6.2.2",
     "coffee-script": "^1.12.7",
     "connect": "^3.7.0",
-    "mocha": "^3.5.3",
+    "mocha": "^11.8.0",
     "phantomjs": "^2.1.7",
     "requisite": "^1.19.17",
-    "selenium-standalone": "^6.24.0",
-    "serve-static": "^1.16.3",
+    "selenium-standalone": "^10.0.2",
+    "serve-static": "^2.2.1",
     "shortcake": "^1.2.8",
-    "uglify-js": "^2.8.29",
-    "webdriverio": "^4.14.4"
+    "uglify-js": "^3.19.3",
+    "webdriverio": "^9.31.4"
   },
   "scripts": {
     "prepublishOnly": "cake build",
